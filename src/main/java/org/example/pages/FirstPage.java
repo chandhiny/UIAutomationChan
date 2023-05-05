@@ -110,7 +110,10 @@ public class FirstPage extends Driver {
         List<Double> carPrices = new ArrayList<>();
         for(WebElement we : cards) {
             System.out.println("cars value: " + we.getText());
-            double myDouble = Double.parseDouble(we.getText());
+            String newString = we.getText().substring(1);
+            newString = newString.replace(",", ""); // Remove the comma separator
+
+            double myDouble = Double.parseDouble(newString);
             Assert.assertTrue(myDouble >= 15000 && myDouble <= 65000);
             carPrices.add(myDouble);
         }

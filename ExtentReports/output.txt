@@ -1,0 +1,2 @@
+Highest value: 63285.0
+Lowest value: 31905.0
