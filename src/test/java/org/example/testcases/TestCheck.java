@@ -6,10 +6,12 @@ public class TestCheck {
 
     //Validate A Class models price are between £15,000 and £60,000
 
-    //get the url to hit
+
     @Test
     public void Validation() throws InterruptedException {
+        //get the url to hit
         FirstPage fp = new FirstPage("https://www.mercedes-benz.co.uk/?group=all&subgroup=see-all&view=BODYTYPE");
+        //calling the method where the given testcase is validated
         fp.TestFlow();
     }
 

@@ -30,8 +30,6 @@ public class Driver {
     public static final String BROWSER_SAFARI = "safari";
     public static final String BROWSER_EDGE = "edge";
     public static WebDriver driver;
-    private static WebDriverWait wait;
-    public Wait fluentWait;
 
     public Driver(){}
 
@@ -132,81 +130,5 @@ public class Driver {
         return driver;
     }
 */
-    public void  waitForElementClickable(Long timeUnit, WebElement element) {
-        WebDriverWait wait=new WebDriverWait(driver,Duration.ofSeconds(timeUnit));
-        wait.until(ExpectedConditions.elementToBeClickable(element));
-    }
 
-    public void poll(int i) {
-        try {
-            Thread.sleep(i);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-    }
-
-    public void clickonAction(WebElement element){
-        Actions actions = new Actions(driver);
-        actions.moveToElement(element).click().build().perform();
-    }
-
-    public void  waitForPageToLoad() {
-        new WebDriverWait(driver,Duration.ofSeconds(60))
-                .until(driver ->((JavascriptExecutor)driver).executeScript("return document.readyState").equals("complete"));
-    }
-
-
-    public WebDriverWait getExplicitWait(){
-        if(null!=wait)
-            return wait;
-        else
-            return new WebDriverWait(driver,Duration.ofSeconds(60));
-    }
-
-    public static String takesScreenhot() {
-        String path="";
-        String encodedBase64 = null;
-        FileInputStream fileInputStreamReader = null;
-        try {
-            File sourcePath = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-            System.out.println(System.getProperty("user.dir"));
-            path=System.getProperty("user.dir") + "//ExtentReports//Screenshots//"
-                    + new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date()) + ".png";
-            File destinationPath = new File(path);
-            Files.copy(sourcePath, destinationPath);
-
-            fileInputStreamReader = new FileInputStream(sourcePath);
-            byte[] bytes = new byte[(int)sourcePath.length()];
-            fileInputStreamReader.read(bytes);
-            encodedBase64 = new String(Base64.encodeBase64(bytes));
-
-        } catch (IOException e) {
-            System.out.println("Error occured while execution of takescreenshot object");
-            System.out.println("Exception:"+e.getLocalizedMessage());
-        }
-//        new Driver().closeDriverInstance();
-        return "data:image/png;base64,"+encodedBase64;
-    }
-
-    public void closeDriverInstance(){
-        driver.close();
-        driver.quit();
-        driver=null;
-    }
-
-    public void ScrollToElement(WebElement webElement) {
-        ((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", webElement);
-    }
-
-    public List<WebElement> waitForElementsVisibility(List<WebElement> element) {
-        fluentWait.until(ExpectedConditions.visibilityOfAllElements(element));
-        System.out.println("Element visibility check done " + element.toString());
-        return wait.until(ExpectedConditions.visibilityOfAllElements(element));
-    }
-
-    public WebElement waitForElementVisibility(WebElement element) {
-        fluentWait.until(ExpectedConditions.visibilityOf(element));
-        System.out.println("Element visibility check done " + element.toString());
-        return wait.until(ExpectedConditions.visibilityOf(element));
-    }
 }
