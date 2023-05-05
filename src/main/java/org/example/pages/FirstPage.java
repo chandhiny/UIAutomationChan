@@ -22,6 +22,7 @@ import java.util.List;
 
 public class FirstPage extends Driver {
 
+    // has all the steps need for validating the test case
     @FindBy(css ="")
     private WebElement TestButton;
 
@@ -42,13 +43,22 @@ public class FirstPage extends Driver {
         JavascriptExecutor javascriptExecutor = (JavascriptExecutor) driver;
         return (SearchContext) javascriptExecutor.executeScript("return arguments[0].shadowRoot", shadowHost);
     }
+
+    public void getElementandClick(By by, String path){
+        WebElement element = driver.findElement(by);
+        SearchContext context = element.getShadowRoot();
+        WebElement requiredButton = context.findElement(By.cssSelector(path));
+        requiredButton.click();
+    }
     public void TestFlow() throws InterruptedException {
 
         Thread.sleep(5000);
-        WebElement element = driver.findElement(By.cssSelector("cmm-cookie-banner[class='hydrated']"));
-        SearchContext context = element.getShadowRoot();
-        WebElement cookieAcceptAll = context.findElement(By.cssSelector("button[class='wb-button wb-button--primary wb-button--small wb-button--accept-all']"));
-        cookieAcceptAll.click();
+//        WebElement element = driver.findElement(By.cssSelector("cmm-cookie-banner[class='hydrated']"));
+//        SearchContext context = element.getShadowRoot();
+//        WebElement cookieAcceptAll = context.findElement(By.cssSelector("button[class='wb-button wb-button--primary wb-button--small wb-button--accept-all']"));
+//        cookieAcceptAll.click();
+
+        getElementandClick(By.cssSelector("cmm-cookie-banner[class='hydrated']"),"button[class='wb-button wb-button--primary wb-button--small wb-button--accept-all']");
 
 
         WebElement shadowHost = driver.findElement(By.cssSelector("owc-header[class='webcomponent aem-GridColumn aem-GridColumn--default--12']"));
