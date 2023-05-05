@@ -3,4 +3,4 @@
 
 This UI Automation specializes on Shadow DOM elements 
 
-To this Project, you can use mvn clena test command - a general maven project
+To this Project, you can `use mvn clean test` command - a general maven project
