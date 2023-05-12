@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8fabd37d-2ac8-4b01-952a-f514333cfe92" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/utils/utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/PiaWebPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/Screenshots/2023.05.05.17.53.16.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtentReports/Screenshots/2023.05.05.18.11.21.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/pages/FirstPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/pages/FirstPage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/web/Driver.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/web/Driver.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/testcases/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/testcases/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/example/testcases/TestCheck.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/example/testcases/TestCheck.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,7 +66,7 @@
       <recent name="org.example.web" />
     </key>
   </component>
-  <component name="RunManager" selected="TestNG.TestCheck.Validation">
+  <component name="RunManager" selected="TestNG.TestCheck.WebPageValidation">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.testcases.Main" />
       <module name="BasicSeleniumUITesting" />
@@ -117,8 +115,27 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TestCheck.WebPageValidation" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="BasicSeleniumUITesting" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.testcases.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.example.testcases" />
+      <option name="MAIN_CLASS_NAME" value="org.example.testcases.TestCheck" />
+      <option name="METHOD_NAME" value="WebPageValidation" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.TestCheck.WebPageValidation" />
         <item itemvalue="TestNG.TestCheck.Validation" />
         <item itemvalue="Application.Main" />
         <item itemvalue="TestNG.TestCheck" />

@@ -22,7 +22,13 @@
         <version>4.4.0</version>
     </dependency>
 
-    <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>5.0.6</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/commons-io/commons-io -->
     <dependency>
         <groupId>commons-io</groupId>
         <artifactId>commons-io</artifactId>

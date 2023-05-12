@@ -1,6 +1,7 @@
 package org.example.testcases;
 
 import org.example.pages.FirstPage;
+import org.example.pages.PiaWebPage;
 import org.testng.annotations.Test;
 public class TestCheck {
 
@@ -15,5 +16,10 @@ public class TestCheck {
         fp.TestFlow();
     }
 
+    @Test
+    public void WebPageValidation(){
+        PiaWebPage piaWebPage = new PiaWebPage("https://www.dymatrix.de/");
+        piaWebPage.testFlow();
+    }
 }
 
