@@ -51,7 +51,7 @@ public class Driver {
 //        String platform=System.getProperty("executionPlatform").toLowerCase();
 //        System.out.println("platform:"+platform);
 
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
 
 //        Map<String, Object> prefs = new HashMap<String, Object>();
 //        prefs.put("profile.default_content_setting_values.cookies", 2);
@@ -61,6 +61,7 @@ public class Driver {
         ChromeOptions options = new ChromeOptions();
 //        options.addArguments("--headless");
         options.addArguments("--incognito");
+        options.addArguments("--disable-blink-features=AutomationControlled");
         options.addArguments("start-maximized");
         options.addArguments("window-size=1920,1080");
         options.addArguments("--allow-running-insecure-content");

@@ -16,11 +16,12 @@
     </properties>
     <dependencies>
     <!-- Web Automation Library (Selenium) : https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-java  -->
-    <dependency>
-        <groupId>org.seleniumhq.selenium</groupId>
-        <artifactId>selenium-java</artifactId>
-        <version>4.4.0</version>
-    </dependency>
+
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>4.23.0</version>
+        </dependency>
 
         <dependency>
             <groupId>com.aventstack</groupId>
@@ -45,8 +46,9 @@
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.3.2</version>
+            <version>5.9.2</version>
         </dependency>
+
 
         <!-- https://mvnrepository.com/artifact/org.apache.directory.studio/org.apache.commons.codec -->
         <dependency>

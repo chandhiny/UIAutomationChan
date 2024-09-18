@@ -12,7 +12,7 @@ public class PiaWebPage extends Driver {
 
    utils utils = new utils();
 
-   @FindBy
+   @FindBy(css = "a[title=\"Customer Experience Management & Marketing Automation mit DYMATRIX\"]")
    public WebElement productRef;
 
    public WebElement getProductRef(){
@@ -29,8 +29,9 @@ public class PiaWebPage extends Driver {
 
     public void testFlow(){
        if(getProductRef().isDisplayed()){
-           utils.waitForElementClickable(5000L,getProductRef()); // waiting for the element to be clickable
-           getProductRef().click();
+           utils.clickonAction(getProductRef()); // waiting for the element to be clickable
+
+           utils.closeDriverInstance();
        }
     }
 
